@@ -11,6 +11,12 @@ def rectangleArea(w, h):
 def circleArea(r):
      return math.pi * r**2
 #
+def squarePyramidVolume(radius):
+    return 4/3*math.pi*radius**3
+#
+def squarePyramidVolume(base, height):
+    return base*height*base/3
+#
 # printing the menu options
 def prtMenu(shapes):
    for i in range(len(shapes)):
@@ -33,7 +39,7 @@ def isTriangle(a,b,c):
 print ("Welcome to the Area calculation program")
 print ("---------------------------------------\n")  
 # Print out the menu
-shapes = ("Rectangle", "Circle")
+shapes = ("Rectangle", "Circle","Square","Triangle","Sphere","Square-Pyramid")
 while True:
     print ("\nPlease select a shape (press 0 to quit):")
     prtMenu(shapes) 
@@ -51,6 +57,26 @@ while True:
          area   = circleArea(radius)
          print ("The area is", area)
          continue
+    elif shape == "3":
+        width = getNumber("Please enter the width: ")
+        area=rectangleArea(width, width)
+        print("The area is", area)
+        continue
+    elif shape == "4":
+        base=getNumber("Please enter the base: ")
+        hight = getNumber("Please enter the height: ")
+        area = rectangleArea(base,hight )/2
+        print("The area is", area)
+        continue
+    elif shape == "5":
+        radius = getNumber("Please enter the radius: ")
+
+    elif shape == "6":
+        base=getNumber("Please enter the base: ")
+        hight = getNumber("Please enter the height: ")
+        area = squarePyramidVolume(base,hight)
+        print("The area is", area)
+        continue
     elif shape == "0":
          print ("Bye!")
          break
