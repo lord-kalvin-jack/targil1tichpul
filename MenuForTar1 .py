@@ -64,7 +64,7 @@ while True:
         continue
     elif shape == "4":
         base=getNumber("Please enter the base: ")
-        hight = getNumber("Please enter the height: ")
+        square_hight = getNumber("Please enter the height: ")
         area = rectangleArea(base,hight )/2
         print("The area is", area)
         continue
