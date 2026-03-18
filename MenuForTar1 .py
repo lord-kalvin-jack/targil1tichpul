@@ -2,8 +2,30 @@
 #  Example program for Targil 1
 #binyamin godfrey 218804581
 import math
+import numbers
+
 from myboolfuncs import *
 #
+# the 4 number function
+def middleNUmber():
+    numbers = list(map(int, input("Enter four numbers separated by spaces: ").split()))
+    numbers.sort()
+    print (numbers[1],numbers[2])
+# the 4 number function without sort
+def middlenumbernofunc():
+    numbers = list(map(int, input("Enter four numbers separated by spaces: ").split()))
+max_number = numbers[3]
+min_number = numbers[0]
+for number in numbers:
+    if number > max_number:
+        max_number = number
+    if number < min_number:
+        min_number = number
+for number in numbers:
+    if number!= min_number or number!= max_number:
+        print (number)
+
+
 # Area calculation program  
 def rectangleArea(w, h):
      return w*h
