@@ -49,16 +49,20 @@ def bigtupplemiddlenumber(tuple):
     tuplemiddlenumber(newtuple)
 #
 def shiftL(biNr, N):
-    biNr=biNr[N:]
-    biNr.insert(0,'0'*N)
+    return biNr[N:]+('0'*N)
+
 #
 def shiftR(biNr, N):
-    biNr=biNr[:N]
-    biNr+('0'*N)
+    return ('0'*N)+biNr[:N]
+
 #
 def shiftCL(biNr, N):
+    tempbin = biNr[N:]
+    return biNr[N:] + tempbin
 #
 def shiftCR(biNr, N):
+    tempbin = biNr[:N]
+    return tempbin+biNr[:N]
 # Area calculation program
 def rectangleArea(w, h):
      return w*h
