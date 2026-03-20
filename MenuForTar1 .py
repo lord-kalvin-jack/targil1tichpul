@@ -24,9 +24,42 @@ for number in numbers:
 for number in numbers:
     if number!= min_number or number!= max_number:
         print (number)
+#
+def tuplemiddlenumber(tuple):
+    sortedlist=sorted(tuple)
+    print (sortedlist[1],sortedlist[2])
 
-
-# Area calculation program  
+#
+def tupplemiddlenumbernofunc(tuple):
+    numbers=list(tuple)
+    max_number = numbers[3]
+    min_number = numbers[0]
+    for number in numbers:
+        if number > max_number:
+            max_number = number
+        if number < min_number:
+            min_number = number
+    for number in numbers:
+        if number != min_number or number != max_number:
+            print(number)
+#
+def bigtupplemiddlenumber(tuple):
+    numeric_list = [item for item in tuple if isinstance(item, (int, float))]
+    newtuple=tuple(numeric_list)
+    tuplemiddlenumber(newtuple)
+#
+def shiftL(biNr, N):
+    biNr=biNr[N:]
+    biNr.insert(0,'0'*N)
+#
+def shiftR(biNr, N):
+    biNr=biNr[:N]
+    biNr+('0'*N)
+#
+def shiftCL(biNr, N):
+#
+def shiftCR(biNr, N):
+# Area calculation program
 def rectangleArea(w, h):
      return w*h
 #
