@@ -63,6 +63,8 @@ def shiftCL(biNr, N):
 def shiftCR(biNr, N):
     tempbin = biNr[:N]
     return tempbin+biNr[:N]
+#
+
 # Area calculation program
 def rectangleArea(w, h):
      return w*h
