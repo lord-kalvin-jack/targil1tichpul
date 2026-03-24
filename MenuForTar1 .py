@@ -3,8 +3,50 @@
 #binyamin godfrey 218804581
 import math
 import numbers
+import random
 
 from myboolfuncs import *
+from typecounter import*
+
+#
+def nihushtest(rand,guess):
+    result=[]
+    for i in range(len(rand)):
+        if rand[i]==guess[i]:
+            result.append(rand[i])
+        else:
+            result.append('x')
+    return tuple(result)
+#
+def nihushmain():
+    N=5
+    numofcorect = 0
+    maxpct=-1
+    flag=False
+    rand = tuple(random.randint(1, 9) for _ in range(N))
+    while True:
+        numbers_list = []
+        for i in range(N):
+            number = int(input())
+            if number==-1:
+                flag=True
+                break
+            numbers_list.append(number)
+        if flag:
+            break
+        guess = tuple(numbers_list)
+        result=nihushtest(rand, guess)
+        print (result)
+        for answer in result:
+            if answer!='x':
+                numofcorect+=1
+        numofcorect=(numofcorect/N)*100
+        print (numofcorect)
+        if numofcorect>maxpct:
+            maxpct=numofcorect
+        numofcorect = 0
+    print(rand)
+    print(maxpct)
 #
 # the 4 number function
 def middleNUmber():
